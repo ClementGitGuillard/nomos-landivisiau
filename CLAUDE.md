@@ -78,3 +78,12 @@ Site one-page construit en reproduction fidèle de la maquette validée. Scaffol
 coat-amis-charpente (Astro+Tailwind, sitemaps, middleware, _headers, robots). 21 images converties WebP
 (<500 Ko), 8 logos marques uniformisés en teinte sombre sur transparent. Schema `HomeGoodsStore`, OG +
 Twitter, llms.txt. Vérifié visuellement desktop + mobile (preview), 0 erreur console. Non déployé.
+
+### [SVELTIA CMS + Déploiement] — 2026-05-26 (✅)
+**Extraction contenu** : `src/data/home.json` (toutes sections : héro, manifeste, sélection, lieu, en ce moment, histoire, fondateur, partenariats, contact, marques). `index.astro` rebranché pour importer du JSON.
+**Sveltia CMS** : `public/admin/index.html` (CDN) + `public/admin/config.yml` (collections éditables, `local_backend: true`).
+**Déploiement** : `.github/workflows/deploy.yml` (GitHub Actions → wrangler pages deploy), secrets Actions posés.
+**Repo GitHub** : `ClementGitGuillard/nomos-landivisiau` (privé), code pushé branche main.
+**Cloudflare Pages** : projet `nomos-landivisiau` (Direct Upload).
+**Build** : `npm run build` ✅ 0 erreur, 2 pages générées.
+**À faire** : configurer DNS (OVH nameservers → Cloudflare) + domaine personnalisé Pages + SSL Always HTTPS + désactiver blocage AI bots + remplacer pages.dev dans robots.txt.
