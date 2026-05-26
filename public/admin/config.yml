@@ -1,0 +1,147 @@
+backend:
+  name: github
+  repo: ClementGitGuillard/nomos-landivisiau
+  branch: main
+  base_url: https://sveltia-cms-auth.clementguillardpro.workers.dev
+
+local_backend: true
+site_url: https://nomos-landivisiau.fr
+display_url: https://nomos-landivisiau.fr
+logo_url: /logo.png
+
+media_folder: "public"
+public_folder: "/"
+
+i18n:
+  structure: i18n_duplicate
+  locales: [fr]
+  default_locale: fr
+
+collections:
+  - label: "Page d'accueil"
+    name: home
+    file: src/data/home.json
+    format: json
+    i18n: true
+    fields:
+      - label: "SEO"
+        name: seo
+        widget: object
+        i18n: duplicate
+        fields:
+          - { label: "Title (50-60 car)", name: title, widget: string, i18n: duplicate }
+          - { label: "Description (150-160 car)", name: description, widget: string, i18n: duplicate }
+
+      - label: "Héro"
+        name: hero
+        widget: object
+        i18n: duplicate
+        fields:
+          - { label: "Image", name: image, widget: image, allow_multiple: false, i18n: duplicate }
+          - { label: "Alt de l'image", name: imageAlt, widget: string, i18n: duplicate }
+          - { label: "Adresse ligne 1", name: addressLine1, widget: string, i18n: duplicate }
+          - { label: "Adresse ligne 2", name: addressLine2, widget: string, i18n: duplicate }
+          - { label: "Horaires ligne 1", name: hoursLine1, widget: string, i18n: duplicate }
+
+      - label: "Manifeste"
+        name: manifeste
+        widget: object
+        i18n: duplicate
+        fields:
+          - { label: "Titre principal", name: title, widget: string, i18n: duplicate }
+          - { label: "Texte mis en avant", name: highlight, widget: string, i18n: duplicate }
+          - { label: "Description", name: description, widget: text, i18n: duplicate }
+
+      - label: "Sélection — Titre"
+        name: selectionTitle
+        widget: string
+        i18n: duplicate
+      - label: "Sélection — Sous-titre"
+        name: selectionSubtitle
+        widget: string
+        i18n: duplicate
+
+      - label: "Catégories de sélection"
+        name: selection
+        widget: list
+        i18n: duplicate
+        fields:
+          - { label: "Label", name: label, widget: string, i18n: duplicate }
+          - { label: "Image", name: img, widget: image, allow_multiple: false, i18n: duplicate }
+
+      - label: "Le Lieu"
+        name: lieu
+        widget: object
+        i18n: duplicate
+        fields:
+          - { label: "Titre", name: title, widget: string, i18n: duplicate }
+          - { label: "Paragraphes", name: paragraphs, widget: list, field: { label: "Paragraphe", name: text, widget: string, i18n: duplicate }, i18n: duplicate }
+          - { label: "Image", name: image, widget: image, allow_multiple: false, i18n: duplicate }
+          - { label: "Alt de l'image", name: imageAlt, widget: string, i18n: duplicate }
+
+      - label: "En ce moment"
+        name: enCeMoment
+        widget: object
+        i18n: duplicate
+        fields:
+          - { label: "Titre", name: title, widget: string, i18n: duplicate }
+          - { label: "Description", name: description, widget: text, i18n: duplicate }
+          - label: "Images"
+            name: images
+            widget: list
+            i18n: duplicate
+            fields:
+              - { label: "Image", name: src, widget: image, allow_multiple: false, i18n: duplicate }
+              - { label: "Alt", name: alt, widget: string, i18n: duplicate }
+
+      - label: "L'Histoire"
+        name: histoire
+        widget: object
+        i18n: duplicate
+        fields:
+          - { label: "Titre", name: title, widget: string, i18n: duplicate }
+          - { label: "Paragraphes", name: paragraphs, widget: list, field: { label: "Paragraphe", name: text, widget: string, i18n: duplicate }, i18n: duplicate }
+          - { label: "Image", name: image, widget: image, allow_multiple: false, i18n: duplicate }
+          - { label: "Alt de l'image", name: imageAlt, widget: string, i18n: duplicate }
+
+      - label: "Fondateur"
+        name: fondateur
+        widget: object
+        i18n: duplicate
+        fields:
+          - { label: "Nom", name: name, widget: string, i18n: duplicate }
+          - { label: "Titre/Métiers", name: title, widget: string, i18n: duplicate }
+          - { label: "Paragraphes", name: paragraphs, widget: list, field: { label: "Paragraphe", name: text, widget: string, i18n: duplicate }, i18n: duplicate }
+          - { label: "Citation", name: quote, widget: text, i18n: duplicate }
+          - { label: "Image", name: image, widget: image, allow_multiple: false, i18n: duplicate }
+          - { label: "Alt de l'image", name: imageAlt, widget: string, i18n: duplicate }
+
+      - label: "Partenariats"
+        name: partenariats
+        widget: object
+        i18n: duplicate
+        fields:
+          - { label: "Titre", name: title, widget: string, i18n: duplicate }
+          - { label: "Sous-titre", name: subtitle, widget: string, i18n: duplicate }
+          - { label: "Paragraphes", name: paragraphs, widget: list, field: { label: "Paragraphe", name: text, widget: string, i18n: duplicate }, i18n: duplicate }
+          - { label: "Image", name: image, widget: image, allow_multiple: false, i18n: duplicate }
+          - { label: "Alt de l'image", name: imageAlt, widget: string, i18n: duplicate }
+
+      - label: "Contact"
+        name: contact
+        widget: object
+        i18n: duplicate
+        fields:
+          - { label: "Téléphone", name: phone, widget: string, i18n: duplicate }
+          - { label: "Adresse", name: address, widget: string, i18n: duplicate }
+          - { label: "Horaires", name: hours, widget: text, i18n: duplicate }
+          - { label: "Horaires fermé", name: hoursClosed, widget: string, i18n: duplicate }
+          - { label: "Carte", name: map, widget: image, allow_multiple: false, i18n: duplicate }
+
+      - label: "Marques distribuées"
+        name: marques
+        widget: list
+        i18n: duplicate
+        fields:
+          - { label: "Nom", name: name, widget: string, i18n: duplicate }
+          - { label: "Fichier logo", name: file, widget: image, allow_multiple: false, i18n: duplicate }

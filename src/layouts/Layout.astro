@@ -1,0 +1,105 @@
+---
+import Footer from '../components/Footer.astro';
+import LocalBusinessSchema from '../components/schemas/LocalBusinessSchema.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage = '/og-nomos-galerie-art-de-vivre-landivisiau.webp',
+  noindex = false,
+} = Astro.props;
+
+const siteUrl = 'https://nomos-landivisiau.fr';
+const rawPath = canonical ?? Astro.url.pathname;
+const normalizedPath = rawPath === '/' ? '/' : (rawPath.endsWith('/') ? rawPath : `${rawPath}/`);
+const canonicalUrl = `${siteUrl}${normalizedPath}`;
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="NOMOS par Kéruzec-Méar" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+
+    <!-- Fonts : Inter (corps) + Jost (substitut Glacial Indifference) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap" />
+    </noscript>
+
+    <LocalBusinessSchema />
+    <slot name="schema" />
+  </head>
+  <body class="bg-noir text-creme font-body antialiased selection:bg-creme selection:text-noir">
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  /* Glacial Indifference — activée seulement si les fichiers sont déposés dans public/fonts/.
+     Sinon le fallback Jost (font-logo) s'applique automatiquement. */
+  @font-face {
+    font-family: 'Glacial Indifference';
+    src: url('/fonts/GlacialIndifference-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Glacial Indifference';
+    src: url('/fonts/GlacialIndifference-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+</style>

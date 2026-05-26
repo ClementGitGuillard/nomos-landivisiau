@@ -1,0 +1,64 @@
+---
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "HomeGoodsStore",
+  "@id": "https://nomos-landivisiau.fr/#business",
+  "name": "NOMOS par Kéruzec-Méar",
+  "alternateName": "Nomos Landivisiau",
+  "description": "Galerie d'art de vivre à Landivisiau : design, création contemporaine et art appliqué. Vaisselle, mobilier, luminaires, pièces uniques, décoration et fragrances de maisons sélectionnées.",
+  "url": "https://nomos-landivisiau.fr/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://nomos-landivisiau.fr/logo.png",
+    "width": 400,
+    "height": 400
+  },
+  "image": "https://nomos-landivisiau.fr/og-nomos-galerie-art-de-vivre-landivisiau.webp",
+  "telephone": "+33298693490",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5 rue Saint-Guenal",
+    "addressLocality": "Landivisiau",
+    "postalCode": "29400",
+    "addressRegion": "Bretagne",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.5099,
+    "longitude": -4.0658
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "10:00",
+      "closes": "12:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "14:00",
+      "closes": "19:00"
+    }
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Lucky Méar",
+    "jobTitle": "Joaillier, peintre et fondateur"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Landivisiau" },
+    { "@type": "City", "name": "Morlaix" },
+    { "@type": "City", "name": "Landerneau" },
+    { "@type": "City", "name": "Brest" },
+    { "@type": "AdministrativeArea", "name": "Finistère" }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/nomos.par.keruzecmear/",
+    "https://www.linkedin.com/in/lucky-m%C3%A9ar-575699b1/"
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

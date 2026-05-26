@@ -1,0 +1,50 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-noir border-t border-white/10 text-creme">
+  <div class="mx-auto max-w-6xl px-6 py-16">
+    <div class="grid gap-12 md:grid-cols-[1.2fr_1fr_1fr]">
+      <!-- Marque -->
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/logo.png" alt="Monogramme Kéruzec-Méar" width="44" height="44" class="h-11 w-11 object-contain" loading="lazy" />
+          <div class="font-logo leading-tight">
+            <span class="block text-lg tracking-wide2">NOMOS</span>
+            <span class="block text-[0.62rem] tracking-eyebrow text-gris">par Kéruzec-Méar</span>
+          </div>
+        </div>
+        <p class="mt-5 text-sm leading-relaxed text-gris">
+          Boutique d'art et décoration.<br />
+          5 rue Saint-Guenal, 29400 Landivisiau
+        </p>
+      </div>
+
+      <!-- Découvrir -->
+      <div>
+        <h2 class="text-eyebrow uppercase tracking-eyebrow text-gris-clair">Découvrir</h2>
+        <ul class="mt-5 space-y-3 text-sm text-creme/90">
+          <li><a href="https://atelier-joaillerie.fr/" target="_blank" rel="noopener" class="transition-colors hover:text-creme">Bijouterie Kéruzec-Méar</a></li>
+          <li><a href="https://www.lucky-mear.art/" target="_blank" rel="noopener" class="transition-colors hover:text-creme">Fusion — Lucky Méar</a></li>
+        </ul>
+      </div>
+
+      <!-- Suivre -->
+      <div>
+        <h2 class="text-eyebrow uppercase tracking-eyebrow text-gris-clair">Suivre</h2>
+        <ul class="mt-5 space-y-3 text-sm text-creme/90">
+          <li><a href="https://www.instagram.com/nomos.par.keruzecmear/" target="_blank" rel="noopener" class="transition-colors hover:text-creme">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/lucky-m%C3%A9ar-575699b1/" target="_blank" rel="noopener" class="transition-colors hover:text-creme">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-[0.7rem] uppercase tracking-wide2 text-gris md:flex-row">
+      <a href="/mentions-legales/" class="transition-colors hover:text-creme">Mentions légales</a>
+      <p>
+        © NOMOS {year} —
+        <a href="https://agence-clement.fr/" target="_blank" rel="noopener" class="transition-colors hover:text-creme">Site conçu par Agence Clément</a>
+      </p>
+    </div>
+  </div>
+</footer>

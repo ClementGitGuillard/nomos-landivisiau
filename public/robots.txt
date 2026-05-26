@@ -1,0 +1,28 @@
+# Crawlers de recherche IA — autorisés
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Crawlers d'entraînement pur — bloqués
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# Tous les autres crawlers (dont Googlebot)
+User-agent: *
+Allow: /
+
+Sitemap: https://nomos-landivisiau.fr/sitemap-index.xml

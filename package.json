@@ -1,0 +1,20 @@
+{
+  "name": "nomos-landivisiau",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "webp": "node scripts/convert-to-webp.mjs",
+    "webp:keep": "node scripts/convert-to-webp.mjs --keep"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.15.0",
+    "tailwindcss": "^3.4.10"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}

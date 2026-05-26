@@ -1,0 +1,101 @@
+{
+  "seo": {
+    "title": "NOMOS Landivisiau — Galerie d'art de vivre & décoration",
+    "description": "Nomos par Kéruzec-Méar à Landivisiau : galerie d'art de vivre entre design, création contemporaine et art appliqué. Mobilier, luminaires, vaisselle, pièces uniques et fragrances."
+  },
+  "hero": {
+    "image": "hero-galerie-art-de-vivre-nomos-landivisiau.webp",
+    "imageAlt": "Showroom de la galerie Nomos par Kéruzec-Méar à Landivisiau",
+    "addressLine1": "5 rue Saint-Guenal",
+    "addressLine2": "29400 Landivisiau",
+    "hoursLine1": "Mardi — Samedi : 10h-19h"
+  },
+  "marques": [
+    { "name": "Serax", "file": "serax-blanc.png" },
+    { "name": "Oluce", "file": "oluce-blanc.png" },
+    { "name": "Brokis", "file": "brokis-blanc.png" },
+    { "name": "District Eight", "file": "district-eight-blanc.png" },
+    { "name": "101 Copenhagen", "file": "101-copenhagen-blanc.png" },
+    { "name": "Atelier Vierkant", "file": "atelier-vierkant-blanc.png" },
+    { "name": "Gardeco", "file": "gardeco-blanc.png" },
+    { "name": "IB Laursen", "file": "ib-blanc.png" }
+  ],
+  "manifeste": {
+    "title": "Des objets choisis pour ce qu'ils dégagent.",
+    "highlight": "Pas pour ce qu'ils décorent.",
+    "description": "Nomos est un lieu. Un regard. Une exigence. Une galerie d'art de vivre, à mi-chemin entre design, création contemporaine et art appliqué."
+  },
+  "selection": [
+    { "label": "Vaisselle", "img": "selection-vaisselle-nomos-landivisiau.webp" },
+    { "label": "Mobilier", "img": "selection-mobilier-nomos-landivisiau.webp" },
+    { "label": "Pièces uniques", "img": "selection-pieces-uniques-nomos-landivisiau.webp" },
+    { "label": "Luminaires", "img": "selection-luminaires-nomos-landivisiau.webp" },
+    { "label": "Design", "img": "selection-design-nomos-landivisiau.webp" },
+    { "label": "Décoration", "img": "selection-decoration-nomos-landivisiau.webp" },
+    { "label": "Fragrance", "img": "selection-fragrance-nomos-landivisiau.webp" }
+  ],
+  "selectionTitle": "Sept territoires, un même regard.",
+  "selectionSubtitle": "Le catalogue se déplie en sept registres. La matière comme fil conducteur.",
+  "lieu": {
+    "title": "Nomos ne se raconte pas. Il se traverse.",
+    "paragraphs": [
+      "Sous une lumière maîtrisée, dans un volume pensé pour laisser respirer chaque pièce, la boutique se découvre comme on parcourt une galerie.",
+      "Les matières dialoguent. Le béton tient la trame, le métal ponctue, le bois tempère. Chaque objet trouve sa place. Aucun n'a été retenu par hasard.",
+      "Venir chez Nomos, c'est entrer dans une composition. Y choisir une pièce, c'est en prolonger une autre. Chez soi."
+    ],
+    "image": "le-lieu-boutique-galerie-nomos-landivisiau.webp",
+    "imageAlt": "Intérieur de la boutique Nomos, volume et matières à Landivisiau"
+  },
+  "enCeMoment": {
+    "title": "Présent en boutique.",
+    "description": "Une sélection resserrée.\nDes éditeurs et créateurs choisis pour leur cohérence avec notre regard.\nPlusieurs de ces maisons sont distribuées pour la première fois dans le Finistère.",
+    "images": [
+      { "src": "en-ce-moment-1-nomos-landivisiau.webp", "alt": "Pièce brute en matière naturelle, sélection Nomos" },
+      { "src": "en-ce-moment-2-nomos-landivisiau.webp", "alt": "Objet posé sur bois sombre, galerie Nomos" },
+      { "src": "en-ce-moment-3-nomos-landivisiau.webp", "alt": "Vases sombres sur étagère, boutique Nomos Landivisiau" },
+      { "src": "en-ce-moment-4-nomos-landivisiau.webp", "alt": "Mise en scène d'objets de décoration chez Nomos" },
+      { "src": "selection-fragrance-nomos-landivisiau.webp", "alt": "Bougies parfumées Mad et Len, fragrances Nomos" },
+      { "src": "selection-decoration-nomos-landivisiau.webp", "alt": "Poteries de décoration en terre, sélection Nomos" }
+    ]
+  },
+  "histoire": {
+    "title": "Une histoire qui se poursuit.",
+    "paragraphs": [
+      "À quelques pas d'ici, place de l'Église, la maison Kéruzec-Méar transmet depuis 1920, sur quatre générations, un même métier : choisir la matière, travailler le geste, refuser l'approximation.",
+      "Nomos s'inscrit dans cette continuité. Le terrain change. L'exigence, non.",
+      "Nomos n'est pas une rupture. C'est un prolongement."
+    ],
+    "image": "histoire-place-eglise-landivisiau-nomos.webp",
+    "imageAlt": "Place de l'Église à Landivisiau, maison Kéruzec-Méar"
+  },
+  "fondateur": {
+    "name": "Lucky Méar.",
+    "title": "Joaillier · Peintre · Fondateur",
+    "paragraphs": [
+      "Vingt-sept ans de joaillerie. Une maison familiale centenaire. Et, en parallèle, une pratique picturale construite par strates.",
+      "Pour Lucky Méar, le bijou, la toile et le lieu relèvent du même geste. Même rapport à la matière. Même attention au geste. Même quête d'équilibre entre tension et subtilité.",
+      "Sa démarche, qu'il nomme Fusion, fait coexister des opposés : brut et précieux, contrôle et accident, stabilité et mouvement. La feuille d'or, qu'on retrouve aussi bien sur ses bijoux que sur ses toiles, agit comme un point de tension. Elle capte la lumière, révèle les reliefs, et fait écho à son travail de l'or en joaillerie.",
+      "Son univers se rattache à une sensibilité proche du wabi-sabi : beauté de l'irrégulier, valeur de la matière brute, acceptation de l'imperfection."
+    ],
+    "quote": "Créer un bijou m'a appris la précision.\nPeindre m'a appris le silence.\nConstruire un lieu m'apprend la vision.",
+    "image": "fondateur-lucky-mear-joaillier-peintre-nomos.webp",
+    "imageAlt": "Lucky Méar, joaillier, peintre et fondateur de Nomos"
+  },
+  "partenariats": {
+    "title": "Aux professionnels de l'intérieur.",
+    "subtitle": "Architectes — Décorateurs — Prescripteurs — Agenceurs",
+    "paragraphs": [
+      "Nomos travaille avec celles et ceux qui composent les intérieurs de leurs clients. Sélection sur mesure, conditions privilégiées, accompagnement direct.",
+      "Pour échanger sur un projet ou devenir partenaire revendeur, contactez-nous."
+    ],
+    "image": "partenariats-professionnels-interieur-nomos-landivisiau.webp",
+    "imageAlt": "Accompagnement des professionnels de l'intérieur par Nomos"
+  },
+  "contact": {
+    "phone": "02 98 69 34 90",
+    "address": "5 Rue Saint-Guenal, 29400 Landivisiau",
+    "hours": "Mardi — Samedi\n10h — 12h / 14h — 19h",
+    "hoursClosed": "Fermé dimanche et lundi",
+    "map": "carte-zone-landivisiau-nomos.webp"
+  }
+}
