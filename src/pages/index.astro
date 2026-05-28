@@ -216,11 +216,11 @@ const { marques, selection, title, description } = {
           ))}
         </div>
         <blockquote class="mt-10 border-l border-gris-clair/40 pl-6 font-body text-lg font-light italic leading-relaxed text-creme">
-          « {data.fondateur.quote.split('\n').map((line: string) => (
+          {data.fondateur.quote.split('\n').map((line: string, i: number, arr: string[]) => (
             <>
-              {line}<br />
+              {i === 0 && '« '}{line}{i === arr.length - 1 ? ' »' : <br />}
             </>
-          ))} »
+          ))}
         </blockquote>
       </div>
       <div class="relative aspect-[4/5] overflow-hidden ring-inset ring-[3px] ring-[#a4a2a2]/25 lg:aspect-auto">
