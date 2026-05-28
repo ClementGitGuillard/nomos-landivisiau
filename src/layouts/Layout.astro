@@ -75,8 +75,40 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`
     <slot name="schema" />
   </head>
   <body class="bg-noir text-creme font-body antialiased selection:bg-creme selection:text-noir">
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
     <slot />
     <Footer />
+
+    <script is:inline>
+      (function () {
+        const dot  = document.getElementById("cursor-dot");
+        const ring = document.getElementById("cursor-ring");
+        if (!dot || !ring) return;
+
+        let mx = window.innerWidth / 2,  my = window.innerHeight / 2;
+        let rx = mx, ry = my;
+
+        window.addEventListener("mousemove", e => {
+          mx = e.clientX;
+          my = e.clientY;
+          dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
+        });
+
+        function raf() {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
+          requestAnimationFrame(raf);
+        }
+        raf();
+
+        document.querySelectorAll("a, button, [data-hov]").forEach(el => {
+          el.addEventListener("mouseenter", () => ring.classList.add("hov"));
+          el.addEventListener("mouseleave", () => ring.classList.remove("hov"));
+        });
+      })();
+    </script>
   </body>
 </html>
 
@@ -99,7 +131,41 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`
   }
 
   html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-  body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; cursor: none; }
+
+  .cursor-dot, .cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+  }
+  .cursor-dot {
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    transition: transform 0.18s ease, opacity .2s;
+  }
+  .cursor-ring {
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(255,255,255,.55);
+    transform: translate(-50%, -50%);
+    transition: transform 0.28s cubic-bezier(.22,.61,.36,1),
+                width .3s, height .3s, border-color .3s, opacity .25s;
+  }
+  .cursor-ring.hov {
+    width: 56px;
+    height: 56px;
+    border-color: rgba(255,255,255,.9);
+  }
+  @media (hover: none) {
+    .cursor-dot, .cursor-ring { display: none; }
+    body { cursor: auto; }
+  }
   .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
   .no-scrollbar::-webkit-scrollbar { display: none; }
 </style>
