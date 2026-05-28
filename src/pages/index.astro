@@ -27,12 +27,12 @@ const { marques, selection, title, description } = {
 
     <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-6 px-6 pb-8 sm:px-10 sm:pb-12">
       <!-- Lockup logo -->
-      <div class="flex items-center gap-4 sm:gap-5">
-        <img src="/logo.png" alt="Monogramme NOMOS Kéruzec-Méar" width="120" height="120" class="h-16 w-16 object-contain sm:h-24 sm:w-24" loading="eager" />
+      <div class="flex flex-col items-start gap-1.5 sm:flex-row sm:items-center sm:gap-5">
+        <img src="/logo.png" alt="Monogramme NOMOS Kéruzec-Méar" width="120" height="120" class="h-10 w-10 object-contain sm:h-24 sm:w-24" loading="eager" />
         <div class="font-logo leading-none text-creme">
-          <span class="block text-3xl tracking-[0.18em] sm:text-5xl">NOMOS</span>
-          <span class="mt-1 block text-center text-[0.55rem] tracking-eyebrow text-creme/70 sm:text-xs">par</span>
-          <span class="block text-center text-[0.7rem] tracking-[0.28em] text-creme/90 sm:text-base">KERUZEC-MEAR</span>
+          <span class="block text-2xl tracking-[0.18em] sm:text-5xl">NOMOS</span>
+          <span class="mt-0.5 block text-[0.5rem] tracking-eyebrow text-creme/70 sm:mt-1 sm:text-center sm:text-xs">par</span>
+          <span class="block text-[0.6rem] tracking-[0.28em] text-creme/90 sm:text-center sm:text-base">KERUZEC-MEAR</span>
         </div>
       </div>
 
@@ -46,10 +46,24 @@ const { marques, selection, title, description } = {
   </section>
 
   <!-- ============ MARQUES (bandeau blanc) ============ -->
-  <section class="bg-blanc py-8" aria-label="Maisons distribuées">
-    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-6 px-6 sm:gap-x-14">
+  <section class="overflow-hidden bg-blanc py-8" aria-label="Maisons distribuées">
+    <!-- Mobile : marquee 1 ligne, défilement auto -->
+    <div class="flex sm:hidden">
+      <div class="animate-marquee flex shrink-0 items-center gap-x-10 px-5">
+        {marques.map((m) => (
+          <img src={`/marques/${m.file}`} alt={`${m.name} — distribué chez Nomos`} class="h-6 w-auto object-contain opacity-80" loading="lazy" />
+        ))}
+      </div>
+      <div class="animate-marquee flex shrink-0 items-center gap-x-10 px-5" aria-hidden="true">
+        {marques.map((m) => (
+          <img src={`/marques/${m.file}`} alt="" class="h-6 w-auto object-contain opacity-80" loading="lazy" />
+        ))}
+      </div>
+    </div>
+    <!-- Desktop : ligne statique centrée -->
+    <div class="mx-auto hidden max-w-7xl flex-wrap items-center justify-center gap-x-14 gap-y-6 px-6 sm:flex">
       {marques.map((m) => (
-        <img src={`/marques/${m.file}`} alt={`${m.name} — distribué chez Nomos`} class="h-6 w-auto object-contain opacity-80 sm:h-7" loading="lazy" />
+        <img src={`/marques/${m.file}`} alt={`${m.name} — distribué chez Nomos`} class="h-7 w-auto object-contain opacity-80" loading="lazy" />
       ))}
     </div>
   </section>
